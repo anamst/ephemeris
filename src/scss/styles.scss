@@ -1,0 +1,381 @@
+@import "mixins";
+@import "colors";
+@import "typo";
+@import "override";
+
+// Components
+@import "header";
+@import "footer";
+@import "button";
+@import "scroller";
+@import "overlay";
+@import "hero";
+@import "scrollup";
+
+// Vendor components
+@import "vendor/hamburgers";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 14px;
+  line-height: 1.71429;
+  font-family: $ff-primary;
+  background-color: $primary-color;
+  color: #fff;
+  font-weight: 400;
+  overflow-x: hidden;
+
+  @media only screen and (max-width: 992px) {
+    overflow: visible;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.container {
+  @media (min-width: 1200px) {
+    max-width: 1200px !important;
+  }
+}
+
+.section {
+  display: block;
+  padding: 120px 0;
+
+  @media only screen and (max-width: 992px) {
+    padding: 60px 0;
+
+    &__title {
+      margin-top: 3rem;
+    }
+  }
+
+  &--secondary {
+    background: $gray-color;
+  }
+
+  &--banner {
+    background: linear-gradient(#00010c80, #00010ca4),
+      url("../assets/background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    background-attachment: fixed;
+
+    .banner-container {
+      color: #fff;
+      text-align: left;
+
+      &__title {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+
+        @media only screen and (max-width: 992px) {
+          font-size: 2.5rem;
+        }
+      }
+
+      &__subtitle {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 1em;
+
+        @media only screen and (max-width: 992px) {
+          font-size: 1rem;
+        }
+      }
+
+      &__content {
+        font-size: 1rem;
+        font-weight: 100;
+
+        @media only screen and (max-width: 992px) {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+
+  &--roadmap {
+    background: linear-gradient(#00010c80, #00010ca4),
+      url("../assets/roadmap.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    background-attachment: fixed;
+
+    .roadmap-container {
+      color: #fff;
+      text-align: left;
+
+      &__title {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+
+        @media only screen and (max-width: 992px) {
+          font-size: 2.5rem;
+        }
+      }
+
+      &__line {
+        border-bottom: 2px solid $accent-color;
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        color: $accent-color;
+        text-align: center;
+        padding: 1em;
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+
+        @media only screen and (max-width: 992px) {
+          border-right: 2px solid $accent-color;
+          font-size: 0.8rem;
+          margin-bottom: 1rem;
+          border-bottom: none;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+        }
+      }
+
+      &__text {
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+        text-align: left;
+
+        @media only screen and (max-width: 992px) {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+        }
+      }
+
+      &__flex {
+        display: flex;
+        flex-direction: column;
+
+        @media only screen and (max-width: 992px) {
+          flex-direction: row;
+        }
+      }
+
+      &__span {
+        padding-left: 3em;
+        width: 50%;
+
+        @media only screen and (max-width: 992px) {
+          padding-left: 3em;
+          width: 100%;
+        }
+      }
+
+      &__image-large {
+        max-width: 1200px;
+        margin-bottom: 2em;
+        margin-left: -2em;
+
+        @media only screen and (max-width: 992px) {
+          display: none;
+        }
+      }
+
+      &__image-small {
+        display: none;
+
+        @media only screen and (max-width: 992px) {
+          display: inline-block;
+          max-height: 1680px;
+          margin-top: 2em;
+          margin-bottom: -2em;
+        }
+      }
+
+      &__content {
+        font-size: 1rem;
+        font-weight: 100;
+
+        @media only screen and (max-width: 992px) {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-size: 60px;
+    margin-bottom: 8px;
+    font-weight: 700;
+
+    &--center {
+      text-align: center;
+    }
+  }
+
+  &__description {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    color: $hero-font-color;
+    margin-bottom: 30px;
+
+    &--center {
+      text-align: center;
+
+      @media only screen and (min-width: 1200px) {
+        padding: 0 20%;
+      }
+    }
+  }
+}
+
+.thumbnail {
+  display: block;
+
+  img {
+    max-height: 300px;
+    width: 100%;
+    box-shadow: 0 25px 65px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    object-fit: cover;
+    @media only screen and (max-width: 992px) {
+      display: none;
+    }
+  }
+}
+
+.service {
+  display: block;
+  color: $primary-font-color;
+  background: $gray-color;
+  margin-top: 30px;
+  padding: 60px 45px;
+  border-radius: 10px;
+  height: calc(100% - 30px);
+  transition: all 0.4s ease !important;
+
+  &:hover {
+    color: #fff;
+    box-shadow: 0 10px 25px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    background: linear-gradient(145deg, $gradient-color1, $gradient-color2);
+
+    .content h3,
+    .content p {
+      color: #fff;
+    }
+  }
+
+  .content {
+    h3 {
+      margin-bottom: 20px;
+      font-weight: 700;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    p {
+      font-size: 18px;
+      color: $primary-font-color;
+    }
+  }
+}
+
+.token {
+  display: block;
+  color: $primary-font-color;
+  margin-top: 30px;
+  padding: 60px 45px;
+  border-radius: 10px;
+  height: calc(100% - 30px);
+  transition: all 0.4s ease !important;
+
+  &:hover {
+    color: #fff;
+    box-shadow: 0 10px 25px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+
+    .icon svg path {
+      fill: #fff;
+    }
+
+    .content h3,
+    .content p {
+      color: #fff;
+    }
+  }
+
+  .icon {
+    margin-bottom: 25px;
+
+    svg {
+      width: 4em;
+      height: 4em;
+
+      path {
+        fill: $gradient-color1;
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.content-vision {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $primary-font-color;
+  background: $gray-color;
+  margin-top: 10px;
+  padding: 30px 25px;
+  border-radius: 10px;
+
+  h5 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
+.solution {
+  display: block;
+  color: $primary-font-color;
+  background: $gray-color;
+  padding: 50px 45px;
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
+
+.accent {
+  color: $accent-color;
+}
+
+.investors {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 2em;
+
+  &__block {
+    background-color: $gray-color;
+    border-radius: 10px;
+    padding: 1em 1.5em;
+    margin: 1em;
+  }
+}

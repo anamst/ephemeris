@@ -1,0 +1,24 @@
+.scrollUp {
+  display: none;
+  width: 40px;
+  height: 45px;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-image: url(../assets/back-to-top.png);
+  background-repeat: no-repeat;
+  background-position: 50% 48%;
+  background-color: #fff;
+  -webkit-transition: all 250ms linear;
+  -moz-transition: all 250ms linear;
+  transition: all 250ms linear;
+
+  &:hover {
+  background-color: $accent-color;
+}
+}
+
+
