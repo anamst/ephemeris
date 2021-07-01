@@ -49,10 +49,12 @@ body {
 
   @media only screen and (max-width: 992px) {
     padding: 60px 0;
+  }
 
-    &__title {
-      margin-top: 3rem;
-    }
+  &--accent {
+    font-size: 1.25rem;
+    color: $accent-color;
+    padding-bottom: 0;
   }
 
   &--secondary {
@@ -71,10 +73,28 @@ body {
       color: #fff;
       text-align: left;
 
+      &__flex {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &__flex-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        padding-bottom: 4em;
+      }
+
+      &__head {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 3em;
+        margin-top: 1em;
+      }
+
       &__title {
-        font-size: 3rem;
+        font-size: 2.5rem;
         font-weight: bold;
-        margin-bottom: 1rem;
 
         @media only screen and (max-width: 992px) {
           font-size: 2.5rem;
@@ -84,7 +104,9 @@ body {
       &__subtitle {
         font-size: 1.2rem;
         font-weight: bold;
-        margin-bottom: 1em;
+        margin-bottom: 2em;
+        padding-left: 2em;
+        border-left: solid 3px $accent-color;
 
         @media only screen and (max-width: 992px) {
           font-size: 1rem;
@@ -92,7 +114,7 @@ body {
       }
 
       &__content {
-        font-size: 1rem;
+        font-size: 0.9rem;
         font-weight: 100;
 
         @media only screen and (max-width: 992px) {
@@ -115,7 +137,7 @@ body {
       text-align: left;
 
       &__title {
-        font-size: 3rem;
+        font-size: 2.5rem;
         font-weight: bold;
         margin-bottom: 1rem;
 
@@ -213,7 +235,7 @@ body {
   }
 
   &__title {
-    font-size: 60px;
+    font-size: 2.5rem;
     margin-bottom: 8px;
     font-weight: 700;
 
@@ -243,11 +265,10 @@ body {
   display: block;
 
   img {
-    max-height: 300px;
+    height: 19em;
     width: 100%;
-    box-shadow: 0 25px 65px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    object-fit: cover;
+
     @media only screen and (max-width: 992px) {
       display: none;
     }
@@ -328,6 +349,17 @@ body {
     }
   }
 
+  .icon-nm {
+    svg {
+      width: 4em;
+      height: 4em;
+
+      path {
+        fill: $gradient-color1;
+      }
+    }
+  }
+
   .content {
     display: flex;
     justify-content: space-between;
@@ -336,19 +368,23 @@ body {
 }
 .content-vision {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   color: $primary-font-color;
   background: $gray-color;
-  margin-top: 10px;
+  height: calc(100% - 30px);
+  margin: 10px;
   padding: 30px 25px;
   border-radius: 10px;
 
   h5 {
-    margin-bottom: 20px;
-    font-weight: 600;
+    margin: 20px 0;
+    font-weight: 500;
     text-overflow: ellipsis;
     overflow: hidden;
+    font-size: 1.2rem;
+    padding-bottom: 2em;
   }
 }
 
@@ -356,9 +392,14 @@ body {
   display: block;
   color: $primary-font-color;
   background: $gray-color;
-  padding: 50px 45px;
+  padding: 38px 45px;
   border-radius: 10px;
   margin-bottom: 1em;
+}
+
+.solution-flex {
+  display: flex;
+  justify-content: space-between;
 }
 
 .accent {
@@ -366,6 +407,7 @@ body {
 }
 
 .investors {
+  margin: auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -375,7 +417,15 @@ body {
   &__block {
     background-color: $gray-color;
     border-radius: 10px;
-    padding: 1em 1.5em;
+    padding: 2em 2em;
     margin: 1em;
   }
+}
+
+.hr {
+  width: 20%;
+  margin-right: auto;
+  margin-left: 0;
+  padding: 0;
+  border-top: 3px solid $accent-color;
 }
