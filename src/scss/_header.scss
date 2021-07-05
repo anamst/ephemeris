@@ -18,19 +18,18 @@
   &__container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
 
   &__logo {
     img {
-      height: 60px;
-      vertical-align: middle;
+      height: 14px;
+      vertical-align: top;
 
-      @media only screen and (max-width: 992px) {
-        height: 40px;
-      }
+ 
     }
   }
+
 
   &__menu-button {
     @media only screen and (min-width: 992px) {

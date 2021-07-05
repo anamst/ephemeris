@@ -26,11 +26,27 @@
     }
   }
 
+  &--vision {
+    font-size: 0.85rem;
+    padding: 8px 25px;
+    background: linear-gradient(145deg, $gradient-color1, $gradient-color2);
+    color: #fff;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: #fff;
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+  }
+
   &--disabled {
     color: $accent-color;
     background: transparent;
     text-transform: uppercase;
-    padding: 15px 0;
+    padding: 5px 0;
+    font-size: 0.9rem;
+    font-weight: 500;
   }
 }
 
