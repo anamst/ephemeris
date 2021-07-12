@@ -3,7 +3,6 @@ $hero-font-color: #fff;
 .hero {
   display: flex;
   align-items: center;
-  /* Banner designed by fullvector */
   background: url("../assets/banner.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -42,11 +41,7 @@ $hero-font-color: #fff;
     }
 
     @media only screen and (max-width: 767px) {
-      font-size: 4rem;
-    }
-
-    @media only screen and (max-height: 768px) {
-      font-size: 4rem;
+      font-size: 2.5rem;
     }
   }
 
@@ -61,38 +56,8 @@ $hero-font-color: #fff;
     margin-bottom: 1em;
 
     @media only screen and (max-width: 767px) {
-      font-size: 1.6rem;
-      line-height: 1.8;
+      font-size: 1rem;
+      line-height: 1.2;
     }
-
-    @media only screen and (max-height: 768px) {
-      font-size: 1.2rem;
-    }
-  }
-}
-
-.vl {
-  border-right: 1px solid $accent-color;
-  height: 13em;
-  position: absolute;
-  margin-left: 50%;
-  margin-top: -16em;
-  @media only screen and (max-width: 992px) {
-    display: none;
-  }
-}
-
-.hero-image {
-  display: none;
-  justify-content: flex-end;
-  align-items: center;
-  margin: 2em;
-  padding: 1em;
-  margin-right: -10em;
-  margin-bottom: -5em;
-  position: relative;
-
-  @media only screen and (max-width: 992px) {
-    display: none;
   }
 }
