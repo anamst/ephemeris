@@ -280,6 +280,19 @@ body {
       display: none;
     }
   }
+
+  .img-solution {
+    height: 19.5em;
+    width: 100%;
+    border-radius: 10px;
+
+    @media only screen and (min-width: 992px) and (max-width: 1200px) {
+      height: 21.5em;
+    }
+    @media only screen and (max-width: 992px) {
+      display: none;
+    }
+  }
 }
 
 .service {
@@ -445,8 +458,8 @@ body {
   &__block {
     background-color: $gray-color;
     border-radius: 10px;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     margin: 10px;
     padding: 10px;
   }
